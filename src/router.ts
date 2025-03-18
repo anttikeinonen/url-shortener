@@ -1,7 +1,7 @@
 import { Router } from "express";
 import Url from "./models/url";
 
-async function generateUniqueShortUrl(): Promise<string> {
+export async function generateUniqueShortUrl(): Promise<string> {
     let shortUrl;
     let exists;
 

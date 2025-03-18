@@ -1,7 +1,7 @@
 import sequelize from '../src/sequelize';
 import Url from '../src/models/url';
 
-beforeAll(async () => {
+beforeEach(async () => {
     await sequelize.sync({ force: true });
 });
 
