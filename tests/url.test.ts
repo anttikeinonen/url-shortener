@@ -1,8 +1,5 @@
-import { Sequelize } from 'sequelize';
 import sequelize from '../src/sequelize';
 import Url from '../src/models/url';
-
-// filepath: /Users/antti/git/url-shortener/src/models/url.test.ts
 
 beforeAll(async () => {
     await sequelize.sync({ force: true });

@@ -10,6 +10,16 @@ services:
     depends_on:
       - postgres
 
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      - DATABASE_URL=postgres://username:password@postgres:5432/dbname
+    depends_on:
+      - postgres
+    command: npm test
+
   postgres:
     image: postgres:13
     environment:
