@@ -6,7 +6,6 @@ export default class Url extends Model {
     declare originalUrl: string;
     declare shortUrl: string;
     declare hits: number;
-    declare expireAt: Date;
 }
 
 Url.init({
@@ -27,9 +26,5 @@ Url.init({
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0
-    },
-    expireAt: {
-        type: DataTypes.DATE,
-        allowNull: true
     }
 }, { sequelize })
