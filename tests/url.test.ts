@@ -1,13 +1,4 @@
-import sequelize from '../src/sequelize';
 import Url from '../src/models/url';
-
-beforeEach(async () => {
-    await sequelize.sync({ force: true });
-});
-
-afterAll(async () => {
-    await sequelize.close();
-});
 
 describe('Url Model', () => {
     it('should be defined', () => {

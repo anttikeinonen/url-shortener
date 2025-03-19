@@ -1,17 +1,7 @@
 import request from 'supertest';
-import sequelize from '../src/sequelize';
 import { generateUniqueShortUrl } from '../src/router';
 import app from '../src/app';
 import Url from '../src/models/url';
-
-
-beforeEach(async () => {
-    await sequelize.sync({ force: true });
-});
-
-afterAll(async () => {
-    await sequelize.close();
-});
 
 describe('generateUniqueShortUrl', () => {
     it('should generate a unique short URL', async () => {
