@@ -6,7 +6,9 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc --outDir dist",
     "start": "node dist/src/server.js",
-    "test": "jest --verbose --runInBand --detectOpenHandles"
+    "database_up": "docker-compose -f docker-compose.dev.yml up -d",
+    "test": "jest --verbose --runInBand --detectOpenHandles",
+    "database_down": "docker-compose -f docker-compose.dev.yml down"
   },
   "keywords": [],
   "author": "",

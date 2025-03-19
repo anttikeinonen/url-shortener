@@ -1,14 +1,15 @@
 version: '3.8'
 
 services:
-  app:
-    build: .
-    ports:
-      - "8080:8080"
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
     environment:
       - DATABASE_URL=postgres://username:password@postgres:5432/dbname
     depends_on:
       - postgres
+    command: npm test
 
   postgres:
     image: postgres:13
